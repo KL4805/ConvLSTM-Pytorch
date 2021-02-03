@@ -13,7 +13,7 @@ You will simply need to:
 - put the `convlstm.py` under your project folder
 - call `import convlstm` or something like `from convlstm import ConvLSTM`
 
-## How to use
+## How to initialize
 The `ConvLSTM` class should be initialized as follows: 
 
 `clstm = ConvLSTM(input_dim, hidden_dim, kernel_size, num_layers, batch_first = False, bias = True, return_all_layers = False):`
@@ -27,3 +27,12 @@ Parameters:
 - bias: whether to use bias for convolution
 - return_all_layers: whether to return computations from all layers or not. Detailed later. 
 
+## How to call
+You simply need to invoke `out = clstm(X)` where `X` is some tensor with valid shape.  
+
+Input: 
+- X: a tensor of shape \[B, T, C, H, W\] if `batch_first = True`. Otherwise, \[T, B, C, H, W\].
+  - B: batch_size
+  - T: length of the sequence
+  - C: channels
+  - H, W: height and width
