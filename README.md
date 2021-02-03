@@ -14,9 +14,16 @@ You will simply need to:
 - call `import convlstm` or something like `from convlstm import ConvLSTM`
 
 ## How to use
-The `ConvLSTM` class is implemented as follows: 
+The `ConvLSTM` class should be initialized as follows: 
 
-`class ConvLSTM(nn.Module):`
+`clstm = ConvLSTM(input_dim, hidden_dim, kernel_size, num_layers, batch_first = False, bias = True, return_all_layers = False):`
 
-`    def __init__(self, input_dim, hidden_dim, kernel_size, num_layers,
-                 batch_first=False, bias=True, return_all_layers=False):`
+Parameters: 
+- input_dim: the number of channels in the input
+- hidden_dim: the number of channels in the hidden features
+- kernel_size: size of kernel in convolutions. We recommend square kernels with sizes being odd numbers
+- num_layers: the number of ConvLSTM layers stacked upon each other
+- batch_first: whether or not the input is in batch first mode. Detailed later. 
+- bias: whether to use bias for convolution
+- return_all_layers: whether to return computations from all layers or not. Detailed later. 
+
