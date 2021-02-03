@@ -16,7 +16,7 @@ You will simply need to:
 ## How to use
 The `ConvLSTM` class is implemented as follows: 
 
-`class ConvLSTM(nn.Module):
+`class ConvLSTM(nn.Module):`
 
-    def __init__(self, input_dim, hidden_dim, kernel_size, num_layers,
+`    def __init__(self, input_dim, hidden_dim, kernel_size, num_layers,
                  batch_first=False, bias=True, return_all_layers=False):`
