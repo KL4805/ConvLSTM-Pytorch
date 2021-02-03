@@ -39,4 +39,4 @@ Input:
   
 ## Return values
 The return values will be a tuple of two elements `out = [h, c]`, where: 
-- `h`: a list of length `num_layers` if `return_all_layers = True`. In this case, each `h[i]` will denote the output at layer $i$, and will have shape \[B, T, hidden, H, W\], where hidden is the `hidden_dim`.  Otherwise, `h` will be a list of length 1, and `h[0]` will be the output of the final layer with shape \[B, T, hidden, H, W\]. 
+- `h`: a list of length `num_layers` if `return_all_layers = True`. In this case, each `h[i]` will denote the output at layer `i`, and will have shape \[B, T, hidden, H, W\], where hidden is the `hidden_dim`.  Otherwise, `h` will be a list of length 1, and `h[0]` will be the output of the final layer with shape \[B, T, hidden, H, W\]. 
