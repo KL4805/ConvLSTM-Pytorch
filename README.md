@@ -36,3 +36,7 @@ Input:
   - T: length of the sequence
   - C: channels
   - H, W: height and width
+  
+## Return values
+The return values will be a tuple of two elements `out = [h, c]`, where: 
+- h: a list of length `num_layers` if `return_all_layers = True`, else a list of length 1. 
